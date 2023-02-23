@@ -1,0 +1,1 @@
+.mn-badge{position:relative;height:100%}.mn-badge::before{content:var(--badge);background-color:var(--bg-color);position:absolute;top:-4px;left:6px;font-size:12px;text-transform:capitalize;line-height:16px;padding:1px 8px;font-weight:500;border-radius:11px;color:#fff}

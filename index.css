@@ -1,0 +1,169 @@
+body{
+    margin: 0px;
+ }   
+ .nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0vh 4vw 0vh 0vw;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    width: 100%;
+    padding:16px 30px 16px 30px;
+ }
+ .navdiv>a{
+    margin-right: 3vw;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+ }
+ .nav2{
+    display: flex;
+    justify-content: space-between;
+    margin: 5vh 2vw 0vh 0vw;
+    
+ }
+ .nav2>div:nth-child(3){
+    display: flex;
+    justify-content: space-between;
+    
+ } 
+ .navdiv2>a{
+    margin: 0vh 0vw 0vh 2vw;
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+ }
+ .navdiv2>a:hover{
+   /* margin: 0vh 0vw 0vh 2vw; */
+   text-decoration: none;
+   /* font-size: 35px; */
+   color: rgb(248, 93, 3);
+}
+ .navdiv2{
+   display: flex;
+ } 
+ .mainframe{
+    width: 96%;
+    margin-top: 2vh;
+ }
+ #main2{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    margin-left: 2vw;
+    margin-top: 10vh;
+ }
+ #main2>div{
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   padding: 20px 0px;
+   width: 70%;
+   border-radius: 20px;
+ }
+ #main2>div>img{
+width:120px;
+height: 200px;
+margin-left: 3vw;
+padding: 20px 0px;
+ }
+ #main2>div>img:hover{
+transform: scale(1.3);
+cursor: pointer;
+ }
+
+ 
+ #main2>div>h3{
+   font-size: 20px;
+  padding: 2px 30px;
+
+ }
+ #main2>div>p{
+   font-size: 14px;
+   padding: 2px 30px;
+
+ }
+ #main3{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 10px;
+   margin-left: 2vw;
+   margin-top: 10vh;
+}
+#main3>div{
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   padding: 20px 0px;
+   width: 70%;
+   border-radius: 20px;
+}
+#main3>div>img{
+   width:120px;
+   height: 200px;
+   margin-left: 3vw;
+   padding: 20px 0px;
+}
+#main3>div>img:hover{
+transform: scale(1.3);
+cursor: pointer;
+}
+
+
+#main3>div>h3{
+   font-size: 20px;
+  padding: 2px 30px;
+
+}
+#main3>div>p{
+   font-size: 14px;
+  padding: 2px 30px;
+
+}
+#main4{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 30px;
+   margin-left: 2vw;
+   margin-top: 10vh;
+
+}
+#main4>div{
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   padding: 20px 0px;
+   width: 70%;
+   border-radius: 20px;
+}
+#main4>div>img{
+   width:120px;
+   height: 200px;
+   margin-left: 3vw;
+   padding: 20px 0px;
+}
+#main4>div>img:hover{
+transform: scale(1.3);
+cursor: pointer;
+}
+
+
+#main4>div>h3{
+   font-size: 20px;
+  padding: 2px 30px;
+
+}
+#main4>div>p{
+   font-size: 14px;
+   padding: 2px 30px;
+
+}
+#main4>div>button,#main3>div>button,#main2>div>button{
+   border: none;
+   font-size: 20px;
+   border-radius:10px;
+   margin-left: 2vw;
+   padding: 5px 20px;
+   background-color: rgb(105, 88, 88);
+   color: white;
+   font-weight: 800;
+   box-shadow: rgba(167, 162, 162, 0.45) 0px 25px 20px -20px;
+}
+#main4>div>button:hover,#main3>div>button:hover,#main2>div>button:hover{
+   background-color: rgb(149, 114, 220);
+   box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
