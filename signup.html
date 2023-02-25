@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signin page</title>
+    <style>
+        body{
+            background-color: #042444;
+        }
+        .main{
+            width: 55%;
+            height: 60vh;
+            margin: 10vh 0vw 0vh 20vw;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            padding-top: 20vh;
+            border-radius: 30px;
+            background-color: #A4C4E4;
+        }
+        .inp{
+            margin-left: 15vw;
+            margin-top: 2vh;
+            margin-bottom: 1vh;
+            width: 20vw;
+            height: 5vh;
+            box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px -1px inset;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+        
+        }  
+       #signin{
+        font-size: 40px;
+        height: 8vh;
+        margin-top: 8vh;
+        font-weight: 700;
+        background-color:rgb(57, 57, 78);
+        color:white;
+        border-radius: 30px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgb(2, 124, 246) 0px -2px 6px 0px inset;
+       }
+       #signin:hover{
+       background-color: rgb(39, 4, 237);
+       
+       cursor: pointer;
+       }
+  #sign{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15vw;
+            margin-top: -10vh;
+            margin-bottom: 15vh;
+            width: 20vw;
+            height: 5vh;
+            font-size: 30px;
+            font-weight: 800;
+  }
+  #label{
+    box-shadow:none;
+  }
+           
+    @media only screen and (max-width:1080px) {
+        #sign{
+            font-size: 20px;
+        }
+          #signin{
+            font-size: 20px;
+          }
+    }     
+  
+        
+        
+    </style>
+        <script src="https://kit.fontawesome.com/70c6beacbc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main">
+        <div id="sign">
+            <h1 >Sign in</h1>
+            <a href="./index.html"><i class="fa-sharp fa-solid fa-house-chimney"></i></a>
+        </div>
+        
+        <label for="" class="inp" id="label">Enter email</label>
+        <br>
+        <input type="email" class="inp" id="email"/>
+        <br>
+<label for="" class="inp" id="label">Enter password</label>
+<br>
+        <input type="number" class="inp" id="pswd"/>
+        <br>
+        <button type="click" id="signin" class="inp">Sign in</button>
+    </div>
+    
+</body>
+<script>
+    
+      email=document.getElementById("email")
+      pswd=document.getElementById("pswd")
+      btn=document.getElementById("signin")
+    //   pr=JSON.parse(localStorage.getItem("sin"))||[]
+    pr=[]
+      let obj={};
+      btn.addEventListener("click",function(){
+        console.log("ok")
+          obj.em=email.value
+          obj.ps=pswd.value
+          pr.push(obj)
+          localStorage.setItem("sin",JSON.stringify(pr))
+      })
+</script>
+</html>

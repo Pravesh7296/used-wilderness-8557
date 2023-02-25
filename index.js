@@ -19,6 +19,7 @@ async function fetchdata(){
 
 function display(pr){
     main2=document.getElementById("main2")
+    
 for(let i=0;i<4;i++){
     
     di=document.createElement("div")

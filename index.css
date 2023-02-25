@@ -1,19 +1,112 @@
 body{
     margin: 0px;
  }   
+ 
+.dropdown:hover>.dropdown-menu{
+display:flex;
+padding:40px 100px 10px 5px;
+box-shadow: none;
+}
+
+#pr{
+   text-decoration: none;
+   color: rgb(177, 172, 172);
+   font-size: 15px;
+   margin-left: 70px;
+    margin-bottom: 20px;
+   font-weight: 600;
+}
+#pr:hover{
+   color: black;
+}
+#hr{
+   text-decoration: none;
+   color: black;
+   font-size: 20px;
+   margin-left: 70px;
+   margin-bottom: 10px;
+   font-weight: 800;
+}
+#lr{
+   margin-left: 10vh 0vw 0vh 10vw;
+   
+}
  .nav{
     display: flex;
     justify-content: space-between;
-    margin: 0vh 4vw 0vh 0vw;
+    
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     width: 100%;
     padding:16px 30px 16px 30px;
  }
+ 
+ #main2,#m,#w{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 10px;
+   margin-left: 2vw;
+   margin-top: 10vh;
+}
+#main3{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 10px;
+   margin-left: 2vw;
+   margin-top: 10vh;
+}
+#main4{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 30px;
+   margin-left: 2vw;
+   margin-top: 10vh;
+
+}
+ 
+ @media only screen and (max-width:800px) {
+   .navdiv{
+      width: 30%;
+    }
+    .nav>div:nth-child(2){
+     display: none;
+    }
+    .navdiv>a{
+      /* margin-right: 3vw; */
+      text-decoration: none;
+      font-size: 20px;
+      color: black;
+   }
+   .nav2>div{
+      width: 20%;
+    }
+    .nav2>div:nth-child(2){
+      display: none;
+    }
+    .nav2{
+      flex-direction: column;
+    }
+
+    #main2,#m,#w{
+      display:grid;
+      grid-template-columns: repeat(2,1fr);
+ }
+ #main3{
+   display:grid;
+   grid-template-columns: repeat(2,1fr);
+}
+#main4{
+   display:grid;
+   grid-template-columns: repeat(2,1fr);
+}
+}
  .navdiv>a{
     margin-right: 3vw;
     text-decoration: none;
     font-size: 20px;
     color: black;
+ }
+ .nav2>div{
+   width: 20%;
  }
  .nav2{
     display: flex;
@@ -45,13 +138,7 @@ body{
     width: 96%;
     margin-top: 2vh;
  }
- #main2{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 10px;
-    margin-left: 2vw;
-    margin-top: 10vh;
- }
+
  #main2>div{
    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
    padding: 20px 0px;
@@ -80,13 +167,7 @@ cursor: pointer;
    padding: 2px 30px;
 
  }
- #main3{
-   display: grid;
-   grid-template-columns: repeat(4,1fr);
-   gap: 10px;
-   margin-left: 2vw;
-   margin-top: 10vh;
-}
+
 #main3>div{
    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
    padding: 20px 0px;
@@ -115,43 +196,36 @@ cursor: pointer;
   padding: 2px 30px;
 
 }
-#main4{
-   display: grid;
-   grid-template-columns: repeat(4,1fr);
-   gap: 30px;
-   margin-left: 2vw;
-   margin-top: 10vh;
 
-}
-#main4>div{
+#main4>div,#m>div,#w>div{
    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
    padding: 20px 0px;
    width: 70%;
    border-radius: 20px;
 }
-#main4>div>img{
+#main4>div>img,#m>div>img,#w>div>img{
    width:120px;
    height: 200px;
    margin-left: 3vw;
    padding: 20px 0px;
 }
-#main4>div>img:hover{
+#main4>div>img:hover,#m>div>img:hover,#w>div>img:hover{
 transform: scale(1.3);
 cursor: pointer;
 }
 
 
-#main4>div>h3{
-   font-size: 20px;
-  padding: 2px 30px;
-
-}
-#main4>div>p{
+#main4>div>h3,#m>div>h3,#w>div>h3{
    font-size: 14px;
    padding: 2px 30px;
 
 }
-#main4>div>button,#main3>div>button,#main2>div>button{
+#main4>div>p,#m>div>p,#w>div>p{
+   font-size: 14px;
+   padding: 2px 30px;
+
+}
+#main4>div>button,#main3>div>button,#main2>div>button,#m>div>button,#w>div>button{
    border: none;
    font-size: 20px;
    border-radius:10px;
@@ -162,7 +236,7 @@ cursor: pointer;
    font-weight: 800;
    box-shadow: rgba(167, 162, 162, 0.45) 0px 25px 20px -20px;
 }
-#main4>div>button:hover,#main3>div>button:hover,#main2>div>button:hover{
+#main4>div>button:hover,#main3>div>button:hover,#main2>div>button:hover,#m>div>button:hover,#w>div>button:hover{
    background-color: rgb(149, 114, 220);
    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }

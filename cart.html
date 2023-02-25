@@ -17,7 +17,23 @@
         margin-top: 1vh;
         /* width: 40px; */
       }
-      span{
+      #order{
+        border: none;
+   font-size: 20px;
+   border-radius:40px;
+   margin-right: 40vw;
+   padding: 5px 20px;
+   background-color: rgb(195, 24, 24);
+   color: white;
+   font-weight: 800;
+   box-shadow: rgba(167, 162, 162, 0.45) 0px 25px 20px -20px;
+      }
+
+      #order:hover{
+        background-color: rgb(8, 8, 239);
+        box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+      }
+      .qunt{
         font-size: 25px;
         margin-left:3vw;
         font-weight: 800;
@@ -51,8 +67,11 @@
   <a href="./cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
 </div>
    </nav>
+   <div style="display: flex;justify-content: space-between;">
    <h1 id="total" style="margin-left: 3vw;"> your total price:- <span id="cart-total"  style="font-size: 50px;">0</span>
-    </h1>
+      </h1> 
+      <button id="order" onclick="location.href='./chekout.html'">Make Payment</button>
+    </div>
     <div id="main2">
 
     </div>
@@ -93,6 +112,7 @@ for(let i=0;i<pr.length;i++){
     btn1.innerHTML="+"
     btn2.innerHTML="-"
     qunt.innerHTML=pr[i].quantity
+    qunt.setAttribute("class","qunt")
     button.addEventListener("click",function(){
     
         lr=qr.filter((ele)=>{
