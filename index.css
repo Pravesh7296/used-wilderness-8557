@@ -9,6 +9,7 @@ body{
    height: 5vh;
    margin-left: 55vw;
    margin-top: 10vh;
+   /* margin-bottom:10vh; */
  }
  #filtbtn{
    border: none;
@@ -111,6 +112,12 @@ box-shadow: none;
 }
  
  @media only screen and (max-width:800px) {
+
+   #filtdiv{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      gap: 5px;
+   }
    .navdiv{
       width: 30%;
     }
