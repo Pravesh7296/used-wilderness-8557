@@ -26,7 +26,11 @@
         <h3 style="text-align: right;font-size:20px;font-weight: 200;">English</h3>
     </div>
        </nav>
-
+       <div id="welcome">
+      
+        Welcome <span id="wel">guestid7296</span>
+        
+      </div>      
        <nav class="nav2">
         <div class="navdiv2">
             <div class="dropdown" >
@@ -128,9 +132,9 @@
       
       <a href="#"> 
       
-        <div class="form-outline" style="box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;margin-top: 10px;width: 130px;margin-left: -80px;border-radius: 20px;">
-          <input id="search-focus" type="search" id="form1" class="form-control" />
-          
+        <div class="form-outline" id="searchform">
+          <input id="search-focus" type="search" class="form-control" />
+          <button id="search"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
 
     </a>
@@ -160,7 +164,7 @@
             </div>
           </div>
           <button type="submit" class="btn btn-primary" id="login">Log in</button>
-          <!-- <hr class="hr" /> -->
+          
           <button type="submit" class="btn btn-danger" id="logout" style="margin-left: 100px;">Log out</button>
           <hr class="hr" />
           <label class="form-check-label" for="dropdownCheck2">
@@ -173,10 +177,11 @@
       <a href="./cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
     </div>
        </nav>
+      
        <div class="mainframe">
         <img src="./image/koovs_files/10_ARTIST_DESKTOP5.jpg" alt="" width=100%  >
        </div>
-     
+      
 
     <h4 style="font-size: 50px;margin:10vh 0vw 0vw 3vw;">Shop Men's</h4>
 
@@ -197,13 +202,16 @@
     <script>
       btn1=document.getElementById("login")
       btn2=document.getElementById("logout")
-      
+      nam=document.getElementById("wel")
       email=document.getElementById("exampleDropdownFormEmail2")
       pswd=document.getElementById("exampleDropdownFormPassword2")
       pr=JSON.parse(localStorage.getItem("sin"))||[]
-      btn1.addEventListener("click",function(){
+      btn1.addEventListener("click",function(e){
+        e.preventDefault()
         if(email.value==pr[0].em && pswd.value==pr[0].ps ){
           alert("Welcome Hurry up")
+          
+            nam.innerHTML=pr[0].name
         }
         else{
         alert("Wrong details")

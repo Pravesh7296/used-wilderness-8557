@@ -1,11 +1,58 @@
 body{
     margin: 0px;
  }   
+ #filtdiv{
+   display: flex;
+   justify-content: space-between;
+   
+   width: 35%;
+   height: 5vh;
+   margin-left: 55vw;
+   margin-top: 10vh;
+ }
+ #filtbtn{
+   border: none;
+   font-size: 20px;
+   border-radius:10px;
+   margin-left: 2vw;
+   padding: 5px 20px;
+   background-color: rgb(105, 88, 88);
+   color: white;
+   font-weight: 800;
+   box-shadow: rgba(167, 162, 162, 0.45) 0px 25px 20px -20px;
+ }
+ #filtbtn:hover{
+   background-color: rgb(149, 114, 220);
+   box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+ }
  
+ #searchform{
+   display: flex;
+   justify-content: space-between;
+   width: 250px;
+   margin-left: -11vw;
+   height: 30px;
+   gap: 5px;
+  justify-items: center;
+
+ }
+ #search-focus{
+   width: 200px;
+   height: 40px;
+   margin-top: 5px;
+ }
+ #search{
+   border: none;
+   background-color: white;
+ }
 .dropdown:hover>.dropdown-menu{
 display:flex;
 padding:40px 100px 10px 5px;
 box-shadow: none;
+}
+#welcome{
+   float: right;
+   margin: 3px 15px 0px 0px;
 }
 
 #pr{

@@ -138,9 +138,9 @@ grid-template-columns: repeat(3,1fr);
   
   <a href="#"> 
   
-    <div class="form-outline" style="box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;margin-top: 10px;width: 130px;margin-left: -80px;border-radius: 20px;">
-      <input id="search-focus" type="search" id="form1" class="form-control" />
-      
+    <div class="form-outline" id="searchform">
+      <input id="search-focus" type="search" class="form-control" />
+      <button id="search"><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>
 
 </a>
@@ -154,7 +154,11 @@ grid-template-columns: repeat(3,1fr);
 </div>
    </nav>
   
- 
+   <div id="filtdiv">
+    <input type="number" id="min" placeholder="min-price">
+    <input type="number"  id="max" placeholder="max-price"/>
+    <button id="filtbtn">filter</button>
+   </div>
 
 
 
@@ -412,10 +416,32 @@ grid-template-columns: repeat(3,1fr);
 ]
   qr=JSON.parse(localStorage.getItem("cart"))||[]
 
+  filt=document.getElementById("filtbtn")
+inp1=document.getElementById("min")
+inp2=document.getElementById("max")
+
+filt.addEventListener("click",function(){
+  wr=products.filter((ele)=>{
+  // console.log(ele.price)l
+    if(inp1.value<=ele.price && inp2.value>=ele.price){
+      return ele
+    }
+    
+  })
+  if(wr.length==0){
+    alert("Please enter valid value")
+  }
+  else{
+    display(wr)
+  }
+  // console.log(inp1.value,inp2.value)
+  // console.log(products[0].price)
+})
+
   display(products)
  function display(pr){
     m=document.getElementById("m")
-    
+    m.innerHTML=""
 for(let i=0;i<pr.length;i++){
     
     di=document.createElement("div")

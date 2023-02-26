@@ -17,6 +17,7 @@ async function fetchdata(){
     }
 }
 
+
 function display(pr){
     main2=document.getElementById("main2")
     

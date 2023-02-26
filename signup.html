@@ -11,7 +11,7 @@
         }
         .main{
             width: 55%;
-            height: 60vh;
+            height: 65vh;
             margin: 10vh 0vw 0vh 20vw;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
             padding-top: 20vh;
@@ -80,7 +80,10 @@
             <h1 >Sign in</h1>
             <a href="./index.html"><i class="fa-sharp fa-solid fa-house-chimney"></i></a>
         </div>
-        
+        <label for="" class="inp" id="label">Enter Name</label>
+        <br>
+        <input type="text" class="inp" id="name"/>
+        <br>
         <label for="" class="inp" id="label">Enter email</label>
         <br>
         <input type="email" class="inp" id="email"/>
@@ -94,7 +97,7 @@
     
 </body>
 <script>
-    
+      nam=document.getElementById("name")
       email=document.getElementById("email")
       pswd=document.getElementById("pswd")
       btn=document.getElementById("signin")
@@ -102,11 +105,13 @@
     pr=[]
       let obj={};
       btn.addEventListener("click",function(){
-        console.log("ok")
+        // console.log("ok")
+        obj.name=nam.value
           obj.em=email.value
           obj.ps=pswd.value
           pr.push(obj)
           localStorage.setItem("sin",JSON.stringify(pr))
+          alert("Register successful")
       })
 </script>
 </html>
