@@ -208,15 +208,19 @@
       pr=JSON.parse(localStorage.getItem("sin"))||[]
       btn1.addEventListener("click",function(e){
         e.preventDefault()
-        if(email.value==pr[0].em && pswd.value==pr[0].ps ){
+        if(pr.length==0){
+          alert(" Please register")
+        }
+       else{if(email.value==pr[0].em && pswd.value==pr[0].ps ){
           alert("Welcome Hurry up")
           
             nam.innerHTML=pr[0].name
         }
+        
         else{
         alert("Wrong details")
         }
-        
+       }
       })
       btn2.addEventListener("click",function(){
        alert("Logout Successfully")
